@@ -1316,7 +1316,7 @@ entry.ToString());
             m_frameHandler.SendHeader();
 
             var connectionStart = (ConnectionStartDetails)
-                connectionStartCell.Value;
+                connectionStartCell.GetValue( m_factory.HandshakeContinuationTimeout );
 
             if (connectionStart == null)
             {
